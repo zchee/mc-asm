@@ -38,6 +38,11 @@ setup(
     cmake_install_dir="src/mcasm",
     include_package_data=True,
     extras_require={"test": ["pytest"], "cli": ["rich~=12.0"]},
+    entry_points={
+        'console_scripts': [
+            'mcasm=mcasm.__main__:main',
+        ],
+    },
     long_description=long_description,
     package_data={
         "mcasm": ["py.typed", "_core/__init__.pyi", "_core/mc/__init__.pyi"]
